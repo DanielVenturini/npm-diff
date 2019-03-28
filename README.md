@@ -34,6 +34,12 @@ $ npm-diff intersect 0.0.0 0.1.0 | less
 $ npm-diff intersect 0.0.0 0.1.0 | colordiff | less -R
 ```
 
+If you don't have [colordiff](http://www.colordiff.org), and want to use it (on the Linux, use sudo; in the Mac, don't use):
+
+```bash
+$ make colordiff
+```
+
 ## Sponsors
 
 This module is proudly supported by my [Sponsors](https://github.com/juliangruber/sponsors)!
