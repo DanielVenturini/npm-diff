@@ -1,5 +1,5 @@
 
-# npm-diff(1)
+# npm-diff(2)
 
   Diff two versions of a node module.
 
@@ -39,12 +39,6 @@ If you don't have [colordiff](http://www.colordiff.org), and want to use it (on 
 ```bash
 $ make colordiff
 ```
-
-## Sponsors
-
-This module is proudly supported by my [Sponsors](https://github.com/juliangruber/sponsors)!
-
-Do you want to support modules like this to improve their quality, stability and weigh in on new features? Then please consider donating to my [Patreon](https://www.patreon.com/juliangruber). Not sure how much of my modules you're using? Try [feross/thanks](https://github.com/feross/thanks)!
 
 ## License
 
