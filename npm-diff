@@ -28,27 +28,28 @@ work=/tmp/$RANDOM
 mkdir $work
 cd $work
 
-# get the url when was passed a range version
-#get_url() {
-#  version=$1
-#  urls=$(npm show $module@$version dist.tarball 2>/dev/null)
-#}
-# download
-
-get_url() {
+# download one specify or all range urls
+download_save_urls() {
   version=$1
-  url=""
   urls=$(npm show $module@$version dist.tarball >$work/$version/urls)
-  input="$work/$version/urls"
-
-  while IFS= read -r var
-  do
-    url=$var
-  done < "$input"
-
-  retval=$url
 }
 
+# get the lattest url from all that was saved in file
+get_url_from_file() {
+  while IFS= read -r var
+  do
+    retval=$var
+  done < "$1"
+}
+
+# get url
+get_url() {
+  #version=$1
+  download_save_urls $1
+  get_url_from_file $work/$version/urls
+}
+
+# download
 download(){
   version=$1
   mkdir $version
