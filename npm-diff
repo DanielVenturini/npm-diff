@@ -28,6 +28,17 @@ work=/tmp/$RANDOM
 mkdir $work
 cd $work
 
+# first argument is version and the second argument is the url
+# OR only first argument is the url
+separe_version_url() {
+  if [ -z "$2" ]
+  then
+    retval=$1
+  else
+    retval=$2
+  fi
+}
+
 # download one specify or all range urls
 download_save_urls() {
   version=$1
@@ -44,9 +55,9 @@ get_url_from_file() {
 
 # get url
 get_url() {
-  #version=$1
   download_save_urls $1
   get_url_from_file $work/$version/urls
+  separe_version_url $retval
 }
 
 # download
