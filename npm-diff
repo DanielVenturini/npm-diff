@@ -53,11 +53,16 @@ get_url_from_file() {
   done < "$1"
 }
 
+# just remove a single quote, if exists
+remove_quote() {
+  retval=$(echo $retval | sed "s/'//g")
+}
 # get url
 get_url() {
   download_save_urls $1
   get_url_from_file $work/$version/urls
   separe_version_url $retval
+  remove_quote $retval
 }
 
 # download
