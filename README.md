@@ -3,7 +3,7 @@
 
   Diff two versions of a node module.
 
-  ![screenshot](https://www.dropbox.com/s/ek1yp7jk1slkokd/screen1.png?dl=1)
+  ![screenshot](https://i.ibb.co/MgCCwJC/screen1.png)
 
 ## Installation
 
@@ -26,7 +26,7 @@ Usage: npm-diff <module> <versionA> <versionB>
 $ npm-diff intersect 0 1.0.1 | less
 ```
 
-  ![screenshot](https://www.dropbox.com/s/ymolkhmwlvblnip/screen2.png?dl=1)
+  ![screenshot](https://i.ibb.co/SBwZ25V/screen2.png)
 
 ## Tips
 
