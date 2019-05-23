@@ -3,7 +3,7 @@
 
   Diff two versions of a node module.
 
-  ![screenshot](https://i.cloudup.com/RgiBccKvdt.png)
+  ![screenshot](https://www.dropbox.com/s/ek1yp7jk1slkokd/screen1.png?dl=1)
 
 ## Installation
 
@@ -19,6 +19,14 @@ Usage: npm-diff <module> <versionA> <versionB>
 ```
 
   __npm-diff(1)__ outputs regular __diff(1)__ content so it plays nice with other tooling.
+
+  Also works for range versions, where the last version accepted by the range will be used:
+
+```bash
+$ npm-diff intersect 0 1.0.1 | less
+```
+
+  ![screenshot](https://www.dropbox.com/s/ymolkhmwlvblnip/screen2.png?dl=1)
 
 ## Tips
 
