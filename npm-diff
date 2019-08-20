@@ -49,7 +49,9 @@ download_save_urls() {
 get_url_from_file() {
   while IFS= read -r var
   do
-    retval=$var
+    if [ -n "$var" ]; then
+      retval=$var
+    fi
   done < "$1"
 }
 
@@ -57,6 +59,7 @@ get_url_from_file() {
 remove_quote() {
   retval=$(echo $retval | sed "s/'//g")
 }
+
 # get url
 get_url() {
   download_save_urls $1
