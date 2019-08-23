@@ -1,4 +1,6 @@
 1.3.1 / 2019-08-20
+==================
+
  * fix npm <= 2 insert an empty line in tarballs
 
 1.3.0 / 2019-05-22
